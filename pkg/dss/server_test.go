@@ -41,6 +41,7 @@ func mustGeoPolygonToCellIDs(p *dspb.GeoPolygon) s2.CellUnion {
 
 type mockStore struct {
 	mock.Mock
+	timeout time.Duration
 }
 
 func (ms *mockStore) Close() error {
